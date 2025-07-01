@@ -1,9 +1,25 @@
 <header class="header">
   <div class="left">
     <img src="./assets/layout/images/logo-rhis.png" alt="Logo" class="logo" />
-    <button (click)="toggleSidebar()">☰</button>
+    <button class="menu-btn" (click)="toggleSidebar()">☰</button>
   </div>
-  <div class="right">
-    <button (click)="logout()">Logout</button>
+
+  <div class="right flex gap-6 align-items-center">
+    <div class="search-container">
+      <i class="pi pi-search search-icon"></i>
+      <input type="text" placeholder="Recherche rapide..." class="search-input" />
+      <span class="search-shortcut">ctrl/alt P</span>
+    </div>
+
+    <div class="flex align-items-center gap-3">
+
+      <i class="pi pi-info-circle text-2xl"></i>
+      <i class="pi pi-bell text-2xl"></i>
+
+      <div class="flex align-items-center cursor-pointer">
+        <app-avatar></app-avatar>
+        <i class="pi pi-angle-down text-lg"></i>
+      </div>
+    </div>
   </div>
 </header>

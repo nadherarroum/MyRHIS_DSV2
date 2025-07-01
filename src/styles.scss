@@ -4,6 +4,7 @@
   --my-bg: #f3f4fd;
   --my-grey: #6e6e71;
   --my-primary: #dee1ff;
+  --my-secondary: #e2e4ff;
 }
 
 @import "assets/layout/styles/layout/layout.scss";
@@ -14,3 +15,11 @@
 
 /*Prime flex */
 @import "../node_modules/primeflex/primeflex.scss";
+
+
+body {
+  background-color: var(--my-bg);
+}
+
+.rounded-1rem { border-radius: 1rem !important; }
+.rounded-2rem { border-radius: 2rem !important; }

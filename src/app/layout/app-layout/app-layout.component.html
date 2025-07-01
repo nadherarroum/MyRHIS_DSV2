@@ -2,6 +2,39 @@
 <div class="layout">
   <app-side-bar [isCollapsed]="isSidebarCollapsed"></app-side-bar>
   <main class="main-content">
+
+    <div class="p-2 bg-white breadcrum-wrapper">
+      <app-breadcrumb (currentPage)="onCurrentPageChange($event)"></app-breadcrumb>
+    </div>
+
+    <div class="flex justify-content-between bg-white" *ngIf="currentPage">
+      <div class="header flex items-center gap-2 p-3">
+        <i *ngIf="currentPage.icon" [class]="currentPage.icon + ' header-icon'"></i>
+        <span class="header-title">
+          {{ currentPage.label }}
+        </span>
+      </div>
+
+      <div class="flex align-items-center">
+        <div class="avatars flex align-items-center">
+          <ng-container *ngFor="let avatar of displayedAvatars">
+            <app-avatar [img]="avatar.photoUrl" [alt]="avatar.name"></app-avatar>
+          </ng-container>
+          <span *ngIf="extraAvatarsCount > 0"
+            class="extra-avatars text-lg font-semibold">
+            +{{ extraAvatarsCount }}
+          </span>
+        </div>
+
+        <div class="p-3 add-employee-button">
+          <p-button label="Ajouter un employee"
+            icon="pi pi-plus"
+            [rounded]="true"
+            (onClick)="onAddEmployee()"/>
+        </div>
+      </div>
+    </div>
+
     <router-outlet></router-outlet>
   </main>
 </div>

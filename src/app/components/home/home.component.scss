@@ -1,0 +1,91 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #385fe3;
+  border-radius: 30px;
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin: 0 0.5rem;
+}
+
+.search-icon,
+.filter-icon {
+  color: #555;
+  font-size: 14px;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.employee-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  // border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.employee-card:hover {
+  background: #f0f4ff;
+}
+
+.employee-card.selected {
+  background-color: #e0e8ff;
+  border-right: 4px solid #6366f1;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.details strong {
+  display: block;
+  font-size: 14px;
+}
+
+.details small {
+  color: #777;
+  font-size: 12px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f9fafb;
+}

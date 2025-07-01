@@ -1,1 +1,57 @@
-<p>home works!</p>
+<div class="layout">
+  <aside class="sidebar">
+
+    <div class="search-box">
+      <i class="pi pi-search search-icon"></i>
+      <input type="text" placeholder="Nom, matricule..." class="search-input" />
+      <i class="pi pi-sliders-h filter-icon"></i>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span>Responsables (2)</span>
+        <i class="pi pi-ellipsis-h"></i>
+      </div>
+      <div class="employee-card selected">
+        <app-avatar [img]="'assets/images/img-1.jpg'"
+        [colorBorder]="'#a975f7'"
+          [canHaseColorBorder]="true"></app-avatar>
+        <div class="details">
+          <strong>Lydia Bauer</strong>
+          <small>Responsable cuisine</small>
+        </div>
+      </div>
+
+      <div class="employee-card">
+        <app-avatar [img]="'assets/images/img-2.jpg'"
+          [colorBorder]="'#5ac0d0'"
+          [canHaseColorBorder]="true"></app-avatar>
+        <div class="details">
+          <strong>Nom Prénom</strong>
+          <small>Responsable terrace</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span>Cuisine (1)</span>
+        <i class="pi pi-ellipsis-h"></i>
+      </div>
+      <div class="employee-card">
+        <app-avatar [img]="'assets/images/img-4.png'"
+        [colorBorder]="'#ff9b42'"
+          [canHaseColorBorder]="true"></app-avatar>
+        <div class="details">
+          <strong>Nom Prénom</strong>
+          <small>Manager</small>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <h2>Main content area</h2>
+  </main>
+</div>
