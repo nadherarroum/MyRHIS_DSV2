@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Tableau de bord",
+    "icon": "pi pi-gauge",
+    "route": "/app/home",
+    "expanded": false,
+    "children": []
+  },
+  {
+    "label": "Employés",
+    "icon": "pi pi-users",
+    "route": "",
+    "expanded": false,
+    "children": [
+      { "label": "Groupes de travail"},
+      { "label": "Positions de travail", "route": "/app/employees/positions-de-travail/gestion-des-employes" }
+    ]
+  },
+  {
+    "label": "Planning",
+    "icon": "pi pi-calendar-clock",
+    "route": "/app/planning/gestion-du-planning",
+    "expanded": false,
+    "children": []
+  },
+  {
+    "label": "Prévisions",
+    "icon": "pi pi-chart-line",
+    "route": "/app/previsions/gestion-des-previsions",
+    "expanded": false
+  }
+]

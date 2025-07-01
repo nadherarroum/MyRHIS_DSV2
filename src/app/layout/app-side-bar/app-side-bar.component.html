@@ -1,0 +1,30 @@
+<aside class="sidebar" [class.collapsed]="isCollapsed">
+  <ul class="menu">
+    <li *ngFor="let item of menuItems" class="menu-item">
+      <div class="menu-header"
+        (click)="onMenuItemClick(item)"
+        [class.clickable]="item.route"
+        [routerLink]="item.route || null"
+        routerLinkActive="active-item"
+        #rla="routerLinkActive"
+        [class.active-parent]="rla.isActive">
+        <i *ngIf="item.icon" class="menu-icon" [ngClass]="item.icon"></i>
+        <span class="menu-label">{{ item.label }}</span>
+        <i *ngIf="item.children?.length"
+          class="pi pi-chevron-down dropdown-icon"
+          [class.rotated]="item.expanded">
+        </i>
+      </div>
+      <ul *ngIf="item.expanded && item.children?.length" class="submenu">
+        <li *ngFor="let child of item.children"
+          [routerLink]="child.route"
+          routerLinkActive="active-subitem"
+          #subRla="routerLinkActive"
+          [class.active-subitem]="subRla.isActive"
+          class="submenu-item">
+          {{ child.label }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>

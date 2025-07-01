@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--my-bg);
+  color: white;
+  padding: 0.5rem 1rem;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--my-grey);
+      cursor: pointer;
+    }
+  }
+
+  .right button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
