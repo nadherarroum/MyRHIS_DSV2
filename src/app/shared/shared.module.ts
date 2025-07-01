@@ -25,13 +25,13 @@ const _primengModules = [
 
 const myComponents = [
   AvatarComponent,
-  BreadcrumbComponent
+  BreadcrumbComponent,
+  InfoCardComponent
 ]
 
 @NgModule({
   declarations: [
     ...myComponents,
-    InfoCardComponent,
   ],
   imports: [
     CommonModule,

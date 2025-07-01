@@ -52,6 +52,58 @@
   </aside>
 
   <main class="main-content">
-    <h2>Main content area</h2>
+    <div class="info-card-grid">
+      <app-info-card
+        header="Identité"
+        icon="pi pi-users"
+        [editable]="true"
+        [rows]="[
+          { label: 'Nom', value: 'Lydia' },
+          { label: 'Prénom', value: 'Martin' },
+          { label: 'Date de naissance', value: '27/12/1993' },
+          { label: 'Ville de naissance', value: 'Paris' },
+          { label: 'Code postal de naissance', value: '20091' },
+          { label: 'Pays de naissance', value: 'France' },
+          { label: 'Sexe', value: 'Homme' },
+          { label: 'Situation de handicap', value: 'Non' }
+        ]"
+      ></app-info-card>
+
+      <app-info-card
+        header="Matricules"
+        icon="pi pi-id-card"
+        [editable]="true"
+        [rows]="[
+          { label: 'Matricule 1', value: '12345' },
+          { label: 'Matricule 2', value: '67890' },
+          { label: 'Matricule 3', value: '54321' }
+        ]"
+      ></app-info-card>
+
+      <app-info-card
+        header="Coordonnées"
+        icon="pi pi-phone"
+        [editable]="true"
+        [rows]="[
+          { label: 'Téléphone', value: '+33 1 23 45 67 89' },
+          { label: 'Email', value: 'lydia@example.com' },
+          { label: 'Adresse', value: '123 Rue de Paris' },
+          { label: 'Ville', value: 'Paris' },
+          { label: 'Code Postal', value: '75000' }
+        ]"
+      ></app-info-card>
+
+      <app-info-card
+        header="Autorisation de travail"
+        icon="pi pi-briefcase"
+        [editable]="true"
+        [rows]="[
+          { label: 'Type', value: 'Permis de travail' },
+          { label: 'Date d\'expiration', value: '31/12/2025' }
+        ]"
+      ></app-info-card>
+    </div>
   </main>
+
+
 </div>
